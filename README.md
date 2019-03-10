@@ -1,5 +1,5 @@
 
-# Webtrees 2 Custom Module: ⚶ Vesta Webtrees Location Data Provider
+# ⚶ Vesta Webtrees Location Data Provider (Webtrees 2 Custom Module)
 
 This [webtrees](https://www.webtrees.net/) custom module provides (non-GEDCOM) location data collected via webtrees to other modules.
 The project’s website is [cissee.de](https://cissee.de).
@@ -24,6 +24,7 @@ Thus, users may migrate easily away e.g. from the original places module, withou
 * Requires the ⚶ Vesta Common module ('vesta_common_lib').
 * Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).
 * Support, suggestions, feature requests: <ric@richard-cissee.de>
+* Issues also via <https://github.com/vesta-webtrees-2-custom-modules/vesta_location_data/issues>
 
 ### Installation<a name="installation"/>
 
