@@ -20,7 +20,7 @@ class WebtreesLocationDataModule extends AbstractModule implements ModuleCustomI
 
   private $vesta;
 
-  public function __construct(string $directory) {
+  public function __construct() {
     $this->vesta = json_decode('"\u26B6"');
   }
 
