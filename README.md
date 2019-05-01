@@ -18,9 +18,8 @@ Thus, users may migrate easily away e.g. from the original places module, withou
 
 ### Download<a name="download"/>
 
-* Current version: 1.7.12.1/2.0.0-alpha.5.1
-* Based on and tested with webtrees 1.7.12, may also work with older 1.7.x versions.
-* Also includes a preview for the upcoming webtrees 2.x, tested with webtrees 2.0.0-alpha.5.
+* Current version: 2.0.0-beta.1.1
+* Based on and tested with webtrees 2.0.0-beta.1. Cannot be used with webtrees 1.x!
 * Requires the ⚶ Vesta Common module ('vesta_common_lib').
 * Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).
 * Support, suggestions, feature requests: <ric@richard-cissee.de>
