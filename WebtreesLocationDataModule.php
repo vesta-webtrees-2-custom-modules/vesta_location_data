@@ -4,14 +4,16 @@ namespace Cissee\Webtrees\Module\WebtreesLocationData;
 
 use Cissee\Webtrees\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
 use Cissee\Webtrees\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
-use Vesta\Hook\HookInterfaces\EmptyFunctionsPlace;
-use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Cissee\WebtreesExt\FormatPlaceAdditions;
 use Fisharebest\Webtrees\I18N;
-use Fisharebest\Webtrees\Module\AbstractModule;
-use Vesta\Model\PlaceStructure;
-use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Location;
+use Fisharebest\Webtrees\Module\AbstractModule;
+use Fisharebest\Webtrees\Module\ModuleCustomInterface;
+use Vesta\Hook\HookInterfaces\EmptyFunctionsPlace;
+use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
+use Vesta\Model\MapCoordinates;
+use Vesta\Model\PlaceStructure;
+use Vesta\Model\Trace;
 
 class WebtreesLocationDataModule extends AbstractModule implements ModuleCustomInterface, IndividualFactsTabExtenderInterface, FunctionsPlaceInterface {
 
@@ -29,7 +31,7 @@ class WebtreesLocationDataModule extends AbstractModule implements ModuleCustomI
   }
 
   public function customModuleVersion(): string {
-    return '2.0.0-beta.2.1';
+    return '2.0.0-beta.2.2';
   }
 
   public function customModuleLatestVersionUrl(): string {
@@ -69,42 +71,30 @@ class WebtreesLocationDataModule extends AbstractModule implements ModuleCustomI
     return [];
   }
 
-  //returns lat/lon in int format!
   protected function getLatLon($gedcomName) {
     $location = new Location($gedcomName);
     $latitude = $location->latitude();
     $longitude = $location->longitude();
 
-    //wtf [0,0] are also regular coordinates
-    if (($latitude != 0) && ($longitude != 0)) {
+    //wtf webtrees: 0.0; 0.0 are valid coordinates, why do you use them for 'unknown'?
+    if (($latitude !== 0.0) && ($longitude !== 0.0)) {
       return array($latitude, $longitude);
     }
 
     return null;
   }
 
-  //HookInterface: FunctionsPlaceInterface
-  public function hPlacesGetLatLon(PlaceStructure $place) {
-    return $this->getLatLon($place->getGedcomName());
-  }
+  //HookInterface: FunctionsPlaceInterface  
+  public function plac2Map(PlaceStructure $ps): ?MapCoordinates {
+    $location = new Location($ps->getGedcomName());
+    $latitude = $location->latitude();
+    $longitude = $location->longitude();
 
-  //we shouldn't have to provide this separately ... just use hPlacesGetLatLon directly in tab!
-  public function hFactsTabGetFormatPlaceAdditions(PlaceStructure $place) {
-    $ll = $this->getLatLon($place->getGedcomName());
-    $tooltip = null;
-    if ($ll != null) {
-      $long = array_pop($ll);
-      $lati = array_pop($ll);
-
-      //shouldn't be necessary here, types expected to be integer already
-      //$lati = trim(strtr($lati, "NSEW,�", " - -. ")); // S5,6789 ==> -5.6789
-      //$long = trim(strtr($long, "NSEW,�", " - -. ")); // E3.456� ==> 3.456
-
-      $tooltip = 'via location data';
-      $ll = array($lati, $long);
+    //wtf webtrees: 0.0; 0.0 are valid coordinates, why do you use them for 'unknown'?
+    if (($latitude !== 0.0) && ($longitude !== 0.0)) {
+      return new MapCoordinates(''.$latitude, ''.$longitude, new Trace(I18N::translate('map coordinates via Webtrees Location Data module (mapping outside GEDCOM)')));
     }
-
-    return new FormatPlaceAdditions('', $ll, $tooltip, '', '');
+    
+    return null;
   }
-
 }
