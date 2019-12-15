@@ -31,7 +31,7 @@ class WebtreesLocationDataModule extends AbstractModule implements ModuleCustomI
   }
 
   public function customModuleVersion(): string {
-    return '2.0.0-beta.5.1';
+    return '2.0.0.1';
   }
 
   public function customModuleLatestVersionUrl(): string {
