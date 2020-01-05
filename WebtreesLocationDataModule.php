@@ -4,7 +4,6 @@ namespace Cissee\Webtrees\Module\WebtreesLocationData;
 
 use Cissee\Webtrees\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
 use Cissee\Webtrees\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
-use Cissee\WebtreesExt\FormatPlaceAdditions;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Location;
 use Fisharebest\Webtrees\Module\AbstractModule;
@@ -31,7 +30,7 @@ class WebtreesLocationDataModule extends AbstractModule implements ModuleCustomI
   }
 
   public function customModuleVersion(): string {
-    return '2.0.0.1';
+    return '2.0.1.1';
   }
 
   public function customModuleLatestVersionUrl(): string {

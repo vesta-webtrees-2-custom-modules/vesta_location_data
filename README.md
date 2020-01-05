@@ -20,8 +20,8 @@ Thus, users may migrate easily away e.g. from the original places module, withou
 
 ### Download<a name="download"/>
 
-* Current version: 2.0.0.1
-* Based on and tested with webtrees 2.0.0. Cannot be used with webtrees 1.x, or earlier 2.x versions!
+* Current version: 2.0.1.1
+* Based on and tested with webtrees 2.0.1. Cannot be used with webtrees 1.x. May not work with earlier 2.x versions!
 * Requires the ⚶ Vesta Common module ('vesta_common').
 * Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).
 * Support, suggestions, feature requests: <ric@richard-cissee.de>
@@ -35,9 +35,8 @@ Thus, users may migrate easily away e.g. from the original places module, withou
 ### License<a name="license"/>
 
 * **vesta_location_data: a webtrees custom module**
-* Copyright (C) 2019 Richard Cissée
+* Copyright (C) 2019 - 2020 Richard Cissée
 * Derived from **webtrees** - Copyright (C) 2010 to 2019 webtrees development team.
-* Derived from **webtrees-geneajaubart** - Copyright (C) 2009 to 2016 Jonathan Jaubart.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
