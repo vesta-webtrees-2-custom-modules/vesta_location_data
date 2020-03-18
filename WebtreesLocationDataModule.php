@@ -13,9 +13,11 @@ use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
 use Vesta\Model\Trace;
+use Vesta\VestaModuleCustomTrait;
 
 class WebtreesLocationDataModule extends AbstractModule implements ModuleCustomInterface, IndividualFactsTabExtenderInterface, FunctionsPlaceInterface {
 
+  use VestaModuleCustomTrait;
   use EmptyIndividualFactsTabExtender;
   use EmptyFunctionsPlace;
 
@@ -30,11 +32,11 @@ class WebtreesLocationDataModule extends AbstractModule implements ModuleCustomI
   }
 
   public function customModuleVersion(): string {
-    return '2.0.2.1';
+    return file_get_contents(__DIR__ . '/latest-version.txt');
   }
 
   public function customModuleLatestVersionUrl(): string {
-    return 'https://cissee.de';
+    return 'https://raw.githubusercontent.com/vesta-webtrees-2-custom-modules/vesta_location_data/master/latest-version.txt';
   }
 
   public function customModuleSupportUrl(): string {
