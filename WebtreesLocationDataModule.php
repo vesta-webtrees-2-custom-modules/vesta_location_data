@@ -14,7 +14,7 @@ use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
 use Vesta\Model\Trace;
-use WebtreesCompactTheme\VestaModuleCustomTrait;
+use Vesta\VestaModuleCustomTrait;
 
 class WebtreesLocationDataModule extends AbstractModule implements 
   ModuleCustomInterface, 
