@@ -93,7 +93,7 @@ class WebtreesLocationDataModule extends AbstractModule implements
   }
 
   //HookInterface: FunctionsPlaceInterface  
-  public function plac2Map(PlaceStructure $ps): ?MapCoordinates {
+  public function plac2map(PlaceStructure $ps): ?MapCoordinates {
     $location = new Location($ps->getGedcomName());
     $latitude = $location->latitude();
     $longitude = $location->longitude();
