@@ -5,7 +5,7 @@ namespace Cissee\Webtrees\Module\WebtreesLocationData;
 use Cissee\Webtrees\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
 use Cissee\Webtrees\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
 use Fisharebest\Webtrees\I18N;
-use Fisharebest\Webtrees\Location;
+use Fisharebest\Webtrees\PlaceLocation;
 use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
@@ -80,7 +80,7 @@ class WebtreesLocationDataModule extends AbstractModule implements
   }
 
   protected function getLatLon($gedcomName) {
-    $location = new Location($gedcomName);
+    $location = new PlaceLocation($gedcomName);
     $latitude = $location->latitude();
     $longitude = $location->longitude();
 
@@ -94,7 +94,7 @@ class WebtreesLocationDataModule extends AbstractModule implements
 
   //HookInterface: FunctionsPlaceInterface  
   public function plac2map(PlaceStructure $ps): ?MapCoordinates {
-    $location = new Location($ps->getGedcomName());
+    $location = new PlaceLocation($ps->getGedcomName());
     $latitude = $location->latitude();
     $longitude = $location->longitude();
 
