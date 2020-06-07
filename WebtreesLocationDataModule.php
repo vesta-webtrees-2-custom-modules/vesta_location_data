@@ -5,15 +5,16 @@ namespace Cissee\Webtrees\Module\WebtreesLocationData;
 use Cissee\Webtrees\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
 use Cissee\Webtrees\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
 use Fisharebest\Webtrees\I18N;
-use Fisharebest\Webtrees\PlaceLocation;
 use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
+use Fisharebest\Webtrees\PlaceLocation;
 use Vesta\Hook\HookInterfaces\EmptyFunctionsPlace;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
 use Vesta\Model\Trace;
+use Vesta\ModuleI18N;
 use Vesta\VestaModuleCustomTrait;
 
 class WebtreesLocationDataModule extends AbstractModule implements 
@@ -22,6 +23,7 @@ class WebtreesLocationDataModule extends AbstractModule implements
   FunctionsPlaceInterface {
 
   use ModuleCustomTrait, VestaModuleCustomTrait {
+    VestaModuleCustomTrait::customTranslations insteadof ModuleCustomTrait;
     VestaModuleCustomTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
   }
   
@@ -51,32 +53,23 @@ class WebtreesLocationDataModule extends AbstractModule implements
   }
 
   public function title(): string {
-    return $this->vesta . ' ' . I18N::translate('Vesta Webtrees Location Data Provider');
+    $title = I18N::translate('Vesta Webtrees Location Data Provider');
+    if (!$this->isEnabled()) {
+      $title = ModuleI18N::translate($this, $title);
+    }
+    return $this->vesta . ' ' . $title;
   }
 
   public function description(): string {
-    return I18N::translate('A module providing (non-GEDCOM-based) webtrees location data to other modules.');
+    $description = I18N::translate('A module providing (non-GEDCOM-based) webtrees location data to other modules.');
+    if (!$this->isEnabled()) {
+      $description = ModuleI18N::translate($this, $description);
+    }
+    return $description;
   }
 
-  /**
-   * Where does this module store its resources
-   *
-   * @return string
-   */
   public function resourcesFolder(): string {
     return __DIR__ . '/resources/';
-  }
-
-  /**
-   * Additional/updated translations.
-   *
-   * @param string $language
-   *
-   * @return string[]
-   */
-  public function customTranslations(string $language): array {
-    //TODO
-    return [];
   }
 
   protected function getLatLon($gedcomName) {
