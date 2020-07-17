@@ -90,7 +90,7 @@ class WebtreesLocationDataModule extends AbstractModule implements
     $location = new PlaceLocation($ps->getGedcomName());
     $latitude = $location->latitude();
     $longitude = $location->longitude();
-
+    
     //wtf webtrees: 0.0; 0.0 are valid coordinates, why do you use them for 'unknown'?
     if (($latitude !== 0.0) && ($longitude !== 0.0)) {
       return new MapCoordinates(''.$latitude, ''.$longitude, new Trace(I18N::translate('map coordinates via Webtrees Location Data module (mapping outside GEDCOM)')));
