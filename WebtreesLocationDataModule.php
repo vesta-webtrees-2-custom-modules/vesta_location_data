@@ -9,6 +9,7 @@ use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\PlaceLocation;
+use Vesta\CommonI18N;
 use Vesta\Hook\HookInterfaces\EmptyFunctionsPlace;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
 use Vesta\Model\MapCoordinates;
@@ -53,10 +54,7 @@ class WebtreesLocationDataModule extends AbstractModule implements
   }
 
   public function title(): string {
-    $title = I18N::translate('Vesta Webtrees Location Data Provider');
-    if (!$this->isEnabled()) {
-      $title = ModuleI18N::translate($this, $title);
-    }
+    $title = CommonI18N::titleVestaLocationData();
     return $this->vesta . ' ' . $title;
   }
 
