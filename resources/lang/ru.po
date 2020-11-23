@@ -1,0 +1,31 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the vesta package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: vesta 1.0\n"
+"Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
+"POT-Creation-Date: 2020-09-19 15:42+0200\n"
+"PO-Revision-Date: 2020-11-23 07:28+0000\n"
+"Last-Translator: Gray Rat <grayrats2@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/"
+"vesta-webtrees-custom-modules/vesta-webtrees-location-data-provider/ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4-dev\n"
+
+#: WebtreesLocationDataModule.php:62
+msgid "A module providing (non-GEDCOM-based) webtrees location data to other modules."
+msgstr ""
+"Модуль, предоставляющий данные о местоположении webtrees (не GEDCOM) другим "
+"модулям."
+
+#: WebtreesLocationDataModule.php:94
+msgid "map coordinates via Webtrees Location Data module (mapping outside GEDCOM)"
+msgstr "координаты через модуль Webtrees Location Data (не GEDCOM)"
