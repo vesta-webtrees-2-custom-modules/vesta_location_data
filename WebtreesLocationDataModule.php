@@ -2,8 +2,8 @@
 
 namespace Cissee\Webtrees\Module\WebtreesLocationData;
 
-use Cissee\Webtrees\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
-use Cissee\Webtrees\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
+use Vesta\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
