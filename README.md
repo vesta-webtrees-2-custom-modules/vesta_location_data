@@ -20,7 +20,7 @@ Thus, users may migrate easily away e.g. from the original places module, withou
 
 ### Download<a name="download"/>
 
-* Current version: 2.0.11.0.0
+* Current version: 2.0.11.1.0
 * Based on and tested with webtrees 2.0.11. Requires webtrees 2.0.9 or later.
 * Requires the ⚶ Vesta Common module ('vesta_common').
 * Download the zipped module, including all related modules, [here](https://cissee.de/vesta.latest.zip).
@@ -37,7 +37,7 @@ Thus, users may migrate easily away e.g. from the original places module, withou
 
 * **vesta_location_data: a webtrees custom module**
 * Copyright (C) 2019 – 2021 Richard Cissée
-* Derived from **webtrees** - Copyright 2020 webtrees development team.
+* Derived from **webtrees** - Copyright 2021 webtrees development team.
 * Dutch translations provided by TheDutchJewel.
 * Czech translations provided by Josef Prause.
 * Further translations contributed via weblate.
