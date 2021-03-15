@@ -2,8 +2,8 @@
 
 namespace Cissee\Webtrees\Module\WebtreesLocationData;
 
-use Vesta\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
-use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
+use Cissee\WebtreesExt\Module\ModuleMetaInterface;
+use Cissee\WebtreesExt\Module\ModuleMetaTrait;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
@@ -11,7 +11,9 @@ use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\PlaceLocation;
 use Vesta\CommonI18N;
 use Vesta\Hook\HookInterfaces\EmptyFunctionsPlace;
+use Vesta\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
+use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
 use Vesta\Model\Trace;
@@ -20,12 +22,14 @@ use Vesta\VestaModuleCustomTrait;
 
 class WebtreesLocationDataModule extends AbstractModule implements 
   ModuleCustomInterface, 
+  ModuleMetaInterface, 
   IndividualFactsTabExtenderInterface, 
   FunctionsPlaceInterface {
 
-  use ModuleCustomTrait, VestaModuleCustomTrait {
+  use ModuleCustomTrait, ModuleMetaTrait, VestaModuleCustomTrait {
     VestaModuleCustomTrait::customTranslations insteadof ModuleCustomTrait;
-    VestaModuleCustomTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
+    ModuleMetaTrait::customModuleVersion insteadof ModuleCustomTrait;
+    ModuleMetaTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
   }
   
   use EmptyIndividualFactsTabExtender;
@@ -41,12 +45,12 @@ class WebtreesLocationDataModule extends AbstractModule implements
     return 'Richard Cissée';
   }
 
-  public function customModuleVersion(): string {
-    return file_get_contents(__DIR__ . '/latest-version.txt');
-  }
-
-  public function customModuleLatestVersionUrl(): string {
-    return 'https://raw.githubusercontent.com/vesta-webtrees-2-custom-modules/vesta_location_data/master/latest-version.txt';
+  public function customModuleMetaDatasJson(): string {
+    return file_get_contents(__DIR__ . '/metadata.json');
+  } 
+  
+  public function customModuleLatestMetaDatasJsonUrl(): string {
+    return 'https://raw.githubusercontent.com/vesta-webtrees-2-custom-modules/vesta_location_data/master/metadata.json';
   }
 
   public function customModuleSupportUrl(): string {
