@@ -95,7 +95,6 @@ class WebtreesLocationDataModule extends AbstractModule implements
     if (($latitude !== null) && ($longitude !== null)) {
       return new MapCoordinates(''.$latitude, ''.$longitude, new Trace(I18N::translate('map coordinates via Webtrees Location Data module (mapping outside GEDCOM)')));
     }
-    
     return null;
   }
 }
