@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2020-09-19 15:42+0200\n"
+"POT-Creation-Date: 2022-04-03 20:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: WebtreesLocationDataModule.php:62
+#: WebtreesLocationDataModule.php:66
 msgid "A module providing (non-GEDCOM-based) webtrees location data to other modules."
 msgstr ""
 
-#: WebtreesLocationDataModule.php:94
+#: WebtreesLocationDataModule.php:96
 msgid "map coordinates via Webtrees Location Data module (mapping outside GEDCOM)"
 msgstr ""

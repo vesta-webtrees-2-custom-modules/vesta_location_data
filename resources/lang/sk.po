@@ -2,16 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vesta package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2020-09-19 15:42+0200\n"
+"POT-Creation-Date: 2022-04-03 20:23+0200\n"
 "PO-Revision-Date: 2021-04-29 09:37+0000\n"
 "Last-Translator: ro-la <lacoros@gmail.com>\n"
-"Language-Team: Slovak <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-webtrees-location-data-provider/sk/>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-webtrees-location-data-provider/sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,13 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.7-dev\n"
 
-#: WebtreesLocationDataModule.php:62
+#: WebtreesLocationDataModule.php:66
 msgid "A module providing (non-GEDCOM-based) webtrees location data to other modules."
-msgstr ""
-"Modul poskytujúci webtrees údaje (neuložené v GEDCOM) o polohe iným modulom."
+msgstr "Modul poskytujúci webtrees údaje (neuložené v GEDCOM) o polohe iným modulom."
 
-#: WebtreesLocationDataModule.php:94
+#: WebtreesLocationDataModule.php:96
 msgid "map coordinates via Webtrees Location Data module (mapping outside GEDCOM)"
-msgstr ""
-"geografické koordináty prostredníctvom „webtrees Location Data“ (uložené "
-"mimo GEDCOM)"
+msgstr "geografické koordináty prostredníctvom „webtrees Location Data“ (uložené mimo GEDCOM)"

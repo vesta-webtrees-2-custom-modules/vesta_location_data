@@ -2,16 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the vesta package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: vesta 1.0\n"
 "Report-Msgid-Bugs-To: ric@richard-cissee.de\n"
-"POT-Creation-Date: 2020-09-19 15:42+0200\n"
+"POT-Creation-Date: 2022-04-03 20:23+0200\n"
 "PO-Revision-Date: 2021-04-18 22:26+0000\n"
 "Last-Translator: Hasse Häljeskog <hasse.haljeskog@gmail.com>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/"
-"vesta-webtrees-custom-modules/vesta-webtrees-location-data-provider/sv/>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/vesta-webtrees-custom-modules/vesta-webtrees-location-data-provider/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,14 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.6-dev\n"
 
-#: WebtreesLocationDataModule.php:62
+#: WebtreesLocationDataModule.php:66
 msgid "A module providing (non-GEDCOM-based) webtrees location data to other modules."
-msgstr ""
-"En modul som tillhandahåller (icke-GEDCOM-baserade) webtrees platsdata till "
-"andra moduler."
+msgstr "En modul som tillhandahåller (icke-GEDCOM-baserade) webtrees platsdata till andra moduler."
 
-#: WebtreesLocationDataModule.php:94
+#: WebtreesLocationDataModule.php:96
 msgid "map coordinates via Webtrees Location Data module (mapping outside GEDCOM)"
-msgstr ""
-"mappa kartkoordinater via Webtrees Modul för platsdata (mappning utanför "
-"GEDCOM)"
+msgstr "mappa kartkoordinater via Webtrees Modul för platsdata (mappning utanför GEDCOM)"
