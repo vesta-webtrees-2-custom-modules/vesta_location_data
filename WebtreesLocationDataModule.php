@@ -11,9 +11,7 @@ use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\PlaceLocation;
 use Vesta\CommonI18N;
 use Vesta\Hook\HookInterfaces\EmptyFunctionsPlace;
-use Vesta\Hook\HookInterfaces\EmptyIndividualFactsTabExtender;
 use Vesta\Hook\HookInterfaces\FunctionsPlaceInterface;
-use Vesta\Hook\HookInterfaces\IndividualFactsTabExtenderInterface;
 use Vesta\Model\MapCoordinates;
 use Vesta\Model\PlaceStructure;
 use Vesta\Model\Trace;
@@ -23,7 +21,7 @@ use Vesta\VestaModuleCustomTrait;
 class WebtreesLocationDataModule extends AbstractModule implements
     ModuleCustomInterface, 
     ModuleMetaInterface, 
-    IndividualFactsTabExtenderInterface, 
+    //IndividualFactsTabExtenderInterface, //huh? no
     FunctionsPlaceInterface {
 
     use ModuleCustomTrait,
@@ -34,7 +32,7 @@ class WebtreesLocationDataModule extends AbstractModule implements
         ModuleMetaTrait::customModuleLatestVersion insteadof ModuleCustomTrait;
     }
 
-    use EmptyIndividualFactsTabExtender;
+    //use EmptyIndividualFactsTabExtender;
     use EmptyFunctionsPlace;
 
     private $vesta;
