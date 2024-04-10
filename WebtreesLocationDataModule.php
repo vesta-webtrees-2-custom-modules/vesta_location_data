@@ -19,8 +19,8 @@ use Vesta\ModuleI18N;
 use Vesta\VestaModuleCustomTrait;
 
 class WebtreesLocationDataModule extends AbstractModule implements
-    ModuleCustomInterface, 
-    ModuleMetaInterface, 
+    ModuleCustomInterface,
+    ModuleMetaInterface,
     //IndividualFactsTabExtenderInterface, //huh? no
     FunctionsPlaceInterface {
 
@@ -86,7 +86,7 @@ class WebtreesLocationDataModule extends AbstractModule implements
         return null;
     }
 
-    //HookInterface: FunctionsPlaceInterface  
+    //HookInterface: FunctionsPlaceInterface
     public function plac2map(PlaceStructure $ps): ?MapCoordinates {
         $location = new PlaceLocation($ps->getGedcomName());
         $latitude = $location->latitude();
