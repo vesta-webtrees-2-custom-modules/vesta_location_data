@@ -20,7 +20,7 @@ Thus, users may migrate easily away e.g. from the original places module, withou
 
 ### Download<a name="download"/>
 
-* Current version: 2.1.20.0.0
+* Current version: 2.1.20.1.0
 * Based on and tested with webtrees 2.1.20. Requires webtrees 2.1.17 or later.
 * Requires the ⚶ Vesta Common module ('vesta_common').
 * Download the zip file, which includes all Vesta modules, [here](https://cissee.de/vesta.latest.zip).
